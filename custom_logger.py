@@ -1,7 +1,7 @@
 import logging
 import sys
 
-LOG_PATH = 'main.log'
+LOG_PATH = 'logs/main.log'
 
 def getLogger(log_name='', log_level=logging.DEBUG):
     if len(log_name.strip()) > 0:
