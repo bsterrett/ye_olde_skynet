@@ -1,0 +1,182 @@
+[
+    {
+        "action_type": "raid",
+        "player": "karemkitaa",
+        "troop_allotments": [
+            {
+                "count": 15,
+                "troop_specifier": "t1"
+            }
+        ],
+        "x_coordinate": 47,
+        "y_coordinate": 32
+    },
+    {
+        "action_type": "raid",
+        "player": "Idifee",
+        "troop_allotments": [
+            {
+                "count": 12,
+                "troop_specifier": "t1"
+            }
+        ],
+        "x_coordinate": 44,
+        "y_coordinate": 29
+    },
+    {
+        "action_type": "raid",
+        "player": "zen pyro",
+        "troop_allotments": [
+            {
+                "count": 14,
+                "troop_specifier": "t1"
+            }
+        ],
+        "x_coordinate": 46,
+        "y_coordinate": 29
+    },
+    {
+        "action_type": "raid",
+        "player": "Natars",
+        "troop_allotments": [
+            {
+                "count": 15,
+                "troop_specifier": "t1"
+            }
+        ],
+        "x_coordinate": 44,
+        "y_coordinate": 32
+    },
+    {
+        "action_type": "raid",
+        "player": "Elemental Energy",
+        "troop_allotments": [
+            {
+                "count": 15,
+                "troop_specifier": "t1"
+            }
+        ],
+        "x_coordinate": 42,
+        "y_coordinate": 33
+    },
+    {
+        "action_type": "raid",
+        "player": "Tankattack2",
+        "troop_allotments": [
+            {
+                "count": 15,
+                "troop_specifier": "t1"
+            }
+        ],
+        "x_coordinate": 40,
+        "y_coordinate": 34
+    },
+    {
+        "action_type": "raid",
+        "player": "Igormad",
+        "troop_allotments": [
+            {
+                "count": 15,
+                "troop_specifier": "t1"
+            }
+        ],
+        "x_coordinate": 50,
+        "y_coordinate": 30
+    },
+    {
+        "action_type": "raid",
+        "player": "ADANASPOR",
+        "troop_allotments": [
+            {
+                "count": 25,
+                "troop_specifier": "t1"
+            }
+        ],
+        "x_coordinate": 50,
+        "y_coordinate": 35
+    },
+    {
+        "action_type": "raid",
+        "player": "gdonald",
+        "troop_allotments": [
+            {
+                "count": 50,
+                "troop_specifier": "t1"
+            }
+        ],
+        "x_coordinate": 49,
+        "y_coordinate": 38
+    },
+    {
+        "action_type": "raid",
+        "player": "Natars",
+        "troop_allotments": [
+            {
+                "count": 15,
+                "troop_specifier": "t1"
+            }
+        ],
+        "x_coordinate": 43,
+        "y_coordinate": 26
+    },
+    {
+        "action_type": "raid",
+        "player": "Stone",
+        "troop_allotments": [
+            {
+                "count": 15,
+                "troop_specifier": "t1"
+            }
+        ],
+        "x_coordinate": 49,
+        "y_coordinate": 26
+    },
+    {
+        "action_type": "raid",
+        "player": "Starsong",
+        "troop_allotments": [
+            {
+                "count": 15,
+                "troop_specifier": "t1"
+            }
+        ],
+        "x_coordinate": 51,
+        "y_coordinate": 23
+    },
+    {
+        "action_type": "raid",
+        "player": "Komandant357",
+        "troop_allotments": [
+            {
+                "count": 12,
+                "troop_specifier": "t1"
+            }
+        ],
+        "x_coordinate": 39,
+        "y_coordinate": 31
+    },
+    {
+        "action_type": "raid",
+        "player": "Ice",
+        "troop_allotments": [
+            {
+                "count": 15,
+                "troop_specifier": "t1"
+            }
+        ],
+        "x_coordinate": 39,
+        "y_coordinate": 28
+    },
+    {
+        "action_type": "raid",
+        "player": "byrdman008",
+        "troop_allotments": [
+            {
+                "count": 30,
+                "troop_specifier": "t1"
+            }
+        ],
+        "x_coordinate": 33,
+        "y_coordinate": 30
+    }
+]
