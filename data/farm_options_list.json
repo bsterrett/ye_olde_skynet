@@ -1,0 +1,170 @@
+[
+    {
+        "action_type": "raid",
+        "player": "gdonald",
+        "destination_village": "avalon",
+        "originating_village": "Can Do!",
+        "troop_allotments": [
+            {
+                "count": 20,
+                "troop_specifier": "t3"
+            }
+        ],
+        "x_coordinate": 49,
+        "y_coordinate": 38
+    },
+    {
+        "action_type": "raid",
+        "player": "byrdman008",
+        "destination_village": "Troy",
+        "originating_village": "Can Do!",
+        "troop_allotments": [
+            {
+                "count": 12,
+                "troop_specifier": "t3"
+            }
+        ],
+        "x_coordinate": 33,
+        "y_coordinate": 30
+    },
+    {
+        "action_type": "raid",
+        "player": "Lajn",
+        "destination_village": "j",
+        "originating_village": "Can Do!",
+        "troop_allotments": [
+            {
+                "count": 18,
+                "troop_specifier": "t1"
+            }
+        ],
+        "x_coordinate": 49,
+        "y_coordinate": 41
+    },
+    {
+        "action_type": "raid",
+        "player": "Rybaldus",
+        "destination_village": "Riverhaven",
+        "originating_village": "Can Do!",
+        "troop_allotments": [
+            {
+                "count": 25,
+                "troop_specifier": "t3"
+            }
+        ],
+        "x_coordinate": 48,
+        "y_coordinate": 33
+    },
+    {
+        "action_type": "raid",
+        "player": "musaadmj",
+        "destination_village": "musaadmj`s village",
+        "originating_village": "Can Do!",
+        "troop_allotments": [
+            {
+                "count": 12,
+                "troop_specifier": "t3"
+            }
+        ],
+        "x_coordinate": 54,
+        "y_coordinate": 35
+    },
+    {
+        "action_type": "raid",
+        "player": "Specta",
+        "destination_village": "Specta`s village",
+        "originating_village": "Can Do!",
+        "troop_allotments": [
+            {
+                "count": 12,
+                "troop_specifier": "t1"
+            }
+        ],
+        "x_coordinate": 60,
+        "y_coordinate": 26
+    },
+    {
+        "action_type": "raid",
+        "player": "Jax Teller",
+        "destination_village": "00 Charming",
+        "originating_village": "Can Do!",
+        "troop_allotments": [
+            {
+                "count": 15,
+                "troop_specifier": "t1"
+            }
+        ],
+        "x_coordinate": 45,
+        "y_coordinate": 21
+    },
+    {
+        "action_type": "raid",
+        "player": "Cosmos",
+        "destination_village": "Cosmos`s village",
+        "originating_village": "Can Do!",
+        "troop_allotments": [
+            {
+                "count": 8,
+                "troop_specifier": "t3"
+            }
+        ],
+        "x_coordinate": 33,
+        "y_coordinate": 21
+    },
+    {
+        "action_type": "raid",
+        "player": "fatpigwilly",
+        "destination_village": "fatpigwilly`s village",
+        "originating_village": "Can Do!",
+        "troop_allotments": [
+            {
+                "count": 12,
+                "troop_specifier": "t1"
+            }
+        ],
+        "x_coordinate": 29,
+        "y_coordinate": 27
+    },
+    {
+        "action_type": "raid",
+        "player": "Matters",
+        "destination_village": "Highgarden",
+        "originating_village": "Can Do!",
+        "troop_allotments": [
+            {
+                "count": 15,
+                "troop_specifier": "t3"
+            }
+        ],
+        "x_coordinate": 41,
+        "y_coordinate": 43
+    },
+    {
+        "action_type": "raid",
+        "player": "Gweniff1121",
+        "destination_village": "Pylas",
+        "originating_village": "Can Do!",
+        "troop_allotments": [
+            {
+                "count": 12,
+                "troop_specifier": "t1"
+            }
+        ],
+        "x_coordinate": 51,
+        "y_coordinate": 39
+    },
+    {
+        "action_type": "raid",
+        "player": "JamesJobs",
+        "destination_village": "New York",
+        "originating_village": "Can Do!",
+        "troop_allotments": [
+            {
+                "count": 60,
+                "troop_specifier": "t3"
+            }
+        ],
+        "x_coordinate": 58,
+        "y_coordinate": 34
+    }
+]

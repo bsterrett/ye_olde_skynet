@@ -1,0 +1,6 @@
+*.pyc
+__pycache__/
+logs/
+secrets.json
+session_id.txt
+python_virtual_environment/
