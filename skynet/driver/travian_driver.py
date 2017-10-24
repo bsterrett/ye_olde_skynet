@@ -71,6 +71,7 @@ def get_driver():
 
     logger.debug('No valid saved session found, creating a new one and attaching driver')
     new_session_driver = make_driver_with_new_session()
+    humanlike_pauses.brief_review_delay()
     return new_session_driver
 
 def random_resize(driver):
@@ -221,6 +222,7 @@ class TravianDriver(selenium.webdriver.remote.webdriver.WebDriver):
         map_page = pages.MapPage(self.__wrapped_driver)
         overview_page = pages.OverviewPage(self.__wrapped_driver)
 
+        # self.select_own_village_by_name('Sir Jams A Lot')
         self.select_own_village_by_name('Can Do!')
         exclusion_list = self.get_villages_with_troop_movements()
         filtered_options_list = [options for options in options_list if options['destination_village'] not in exclusion_list]

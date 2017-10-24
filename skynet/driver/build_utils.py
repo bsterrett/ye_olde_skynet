@@ -1,10 +1,14 @@
+from __future__ import division
+from functools import partial
 from IPython import embed
-import pandas as pd
+from scipy.optimize import minimize
 import numpy as np
+import pandas as pd
 
 # EDIT THIS
 base_production_data = {'lumber': 623, 'clay': 749, 'iron': 560, 'wheat': 903}
-mill_production_data = {'lumber': 1, 'clay': 1, 'iron': 1, 'wheat': 1.15}
+mill_production_data = {'lumber': 1, 'clay': 1.15, 'iron': 1, 'wheat': 1.2}
+oases_production_data = {'lumber': 1.25, 'clay': 1, 'iron': 1, 'wheat': 1.25}
 hero_production_base_rate = 640
 population_consumption_rate = -373
 troop_consumption_rate = -683
@@ -16,7 +20,7 @@ current_resource_data = {'lumber': 7415, 'clay': 9305, 'iron': 7903, 'wheat': 36
 DEFAULT_INDEX = pd.Index(['lumber', 'clay', 'iron', 'wheat'])
 
 base_production_rates = pd.Series(name='base_production_rate', data=base_production_data, index=DEFAULT_INDEX)
-oases_production_bonuses = pd.Series(name='oases_production_bonus', data={'lumber': 1, 'clay': 1, 'iron': 1, 'wheat': 1}, index=DEFAULT_INDEX)
+oases_production_bonuses = pd.Series(name='oases_production_bonus', data=oases_production_data, index=DEFAULT_INDEX)
 mill_production_bonuses = pd.Series(name='mill_production_bonus', data=mill_production_data, index=DEFAULT_INDEX)
 
 hero_production_bonuses_split = pd.Series(name='split', data={'lumber': (hero_production_base_rate*0.3), 'clay': (hero_production_base_rate*0.3), 'iron': (hero_production_base_rate*0.3), 'wheat': ((hero_production_base_rate*0.3)+6)}, index=DEFAULT_INDEX)
@@ -41,17 +45,42 @@ def production_rates_for_hero_production_setting(hero_production_setting):
     production_rates = (interim_production_rates + troop_production_rates + population_production_rates).rename('production_rate')
     return production_rates
 
-def get_best_hero_production_setting_simple():
-    hours_till_ready_data = {}
-    for hero_production_setting in ['split', 'lumber', 'clay', 'iron', 'wheat']:
-        production_rates = production_rates_for_hero_production_setting(hero_production_setting)
-        hours_till_ready_data[hero_production_setting] = (deficits / production_rates).max()
+def get_time_given_hero_production_setting_allocations(allocations):
+    split_allocation, lumber_allocation, clay_allocation, iron_allocation, wheat_allocation = allocations
+    production = pd.Series(name='production', data={'lumber': 0, 'clay': 0, 'iron': 0, 'wheat': 0}, index=DEFAULT_INDEX)
+    production += production_rates_for_hero_production_setting('split') * split_allocation
+    production += production_rates_for_hero_production_setting('lumber') * lumber_allocation
+    production += production_rates_for_hero_production_setting('clay') * clay_allocation
+    production += production_rates_for_hero_production_setting('iron') * iron_allocation
+    production += production_rates_for_hero_production_setting('wheat') * wheat_allocation
+    return (deficits / production).max()
 
-    hours_till_ready = pd.Series(name='hours_till_ready', data=hours_till_ready_data)
-    return hours_till_ready.idxmin()
+def allocations_sum_to_one(*allocations):
+    return sum(*allocations) - 1
 
-get_best_hero_production_setting = get_best_hero_production_setting_simple
+constraints = [{'type': 'eq', 'fun': allocations_sum_to_one}]
+x0 = [0.2] * 5
+bounds = [(0,1)] * 5
 
-embed()
+optimization_results = minimize(get_time_given_hero_production_setting_allocations, x0=x0, bounds=bounds, constraints=constraints)
 
+def normalize_optimized_allocations(allocations):
+    def round_small_value_to_zero(value):
+        if abs(value) <= 1e-15:
+            return 0
+        return value
 
+    rounded_allocations = map(round_small_value_to_zero, allocations)
+    rounded_allocation_sum = sum(rounded_allocations)
+    normalize_allocations = map(lambda r: r/rounded_allocation_sum, rounded_allocations)
+    return normalize_allocations
+
+def optimized_hourly_allocations(optimization_results):
+    allocations = optimization_results.x
+    normalized_allocations = normalize_optimized_allocations(allocations)
+    hourly_allocation_values = map(lambda a: a*optimization_results.fun, normalized_allocations)
+    hourly_allocation_keys = ['split', 'lumber', 'clay', 'iron', 'wheat']
+    hourly_allocations = {k: v for (k,v) in zip(hourly_allocation_keys, hourly_allocation_values)}
+    return hourly_allocations
+
+print(optimized_hourly_allocations(optimization_results))

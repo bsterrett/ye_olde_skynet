@@ -19,31 +19,31 @@ Skynet only has the ability to send a single wave of raids, but more features ar
 - Repeating events
 - Build queue
 - Intelligent raid balancing
+- Hero resource bonus balancing
+- Resource upgrade recommender
 
 
 Installation
 ------------
 
 Before you can use Skynet, you will need to:
-- Install [Firefox](https://www.mozilla.org/firefox/new/), preferably version 55+
-- ~~Download the [latest Selenium standalone server](http://www.seleniumhq.org/download/)~~ (now included in this repository)
+- Install the dependencies listed below
 - Download this repository
-- ~~Install required python libraries using pip (described below)~~ (now handled automatically)
 - Configure a secrets.json (described below)
-- Hero resource bonus balancing
-- Resource upgrade recommender
 
 
-Requirements, pip, and virtualenv
+Dependencies
 ------------
 
-Skynet will automatically install all of its own dependencies except two:
-- [pip](https://pip.pypa.io/en/stable/installing/ "Installing pip")
+Skynet will automatically install all of its own dependencies except these:
 - [virtualenv](https://virtualenv.pypa.io/en/stable/installation/ "Installing virtualenv")
+- [java](https://java.com/en/download/help/download_options.xml "Installing Java")
+- [Firefox](https://www.mozilla.org/firefox/new/ "Installing Firefox")
+- [geckodriver](https://github.com/mozilla/geckodriver/releases/latest "Downloading geckodriver")
 
-Install both of these on your system and add them to your PATH. Each time Skynet is run, it will use both of these tools to check for and install its own Python 3 interpreter and modules, if necessary.
 
-Note: This has only been tested on OS X.
+Install all of these on your system and add them to your PATH. Each time Skynet is run, it will use virtualenv to check for and install its own Python 3 interpreter and modules, if necessary.
+
 
 secrets.json
 ------------
@@ -60,9 +60,9 @@ secrets.json
 Usage
 ------------
 
-In order to run Skynet, run:
+In order to use Skynet, run:
 ```bash
-./skynet
+./skynet.sh
 ```
 
 

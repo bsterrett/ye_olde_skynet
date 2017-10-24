@@ -28,6 +28,7 @@ def execute():
     post_login_check.run(ordered=False)
     humanlike_pauses.stop_and_look_delay()
 
+    # with open('data/farm_options_list_portia.json', 'r') as farm_options_file_handle:
     with open('data/farm_options_list.json', 'r') as farm_options_file_handle:
         farm_options_list = json.load(farm_options_file_handle)
     random.shuffle(farm_options_list)

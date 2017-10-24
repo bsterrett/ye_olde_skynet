@@ -9,10 +9,10 @@ def inter_key_delay():
     sleep(log_normal_pause_time(0.03, 0.65))
 
 def inter_field_delay():
-    sleep(log_normal_pause_time(0.8, 2))
+    sleep(log_normal_pause_time(0.9, 1.2))
 
 def inter_button_delay():
-    sleep(log_normal_pause_time(1.2, 2.5))
+    sleep(log_normal_pause_time(1.2, 1.5))
 
 def stop_and_look_delay():
     sleep(log_normal_pause_time(6, 1.5))
